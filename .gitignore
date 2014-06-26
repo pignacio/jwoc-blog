@@ -52,3 +52,7 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# Nikola stuff
+jwoc-blog/cache
+jwoc-blog/output
+jwoc-blog/.doit.db
