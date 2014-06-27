@@ -53,6 +53,6 @@ coverage.xml
 docs/_build/
 
 # Nikola stuff
-jwoc-blog/cache
-jwoc-blog/output
-jwoc-blog/.doit.db
+cache
+output
+.doit.db
