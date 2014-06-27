@@ -21,7 +21,7 @@ Para dar un poco de contexto al visitante desprevenido, voy a estar aprendiendo
 `scikit-learn <http://www.github.com/scikit-learn/scikit-learn>`_
 
 Estoy anotado en el curso de machine learning de `Coursera
-<http://www.coursera.org>`_, que por ahora viene bien, y por ahora sirvió para
+<http://www.coursera.org>`_, que por ahora viene bien, y sirvió para
 recordarme que no me acuerdo absolutamente nada de Cálculo Numérico :P
 
 Después de un par de días, tenemos `el primer pull request
