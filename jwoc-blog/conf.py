@@ -26,7 +26,7 @@ SITE_URL = "http://pignacio.github.io/jwoc-blog"
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://pignacio.github.io/jwoc-blog"
 BLOG_EMAIL = "rossi.ignacio@gmail.com"
-BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)
+BLOG_DESCRIPTION = "JWOC diary."  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -96,6 +96,8 @@ NAVIGATION_LINKS = {
         ("/archive.html", "Archivo"),
         ("/categories/index.html", "Tags"),
         ("/rss.xml", "feed RSS"),
+        ("/stories/contributions.html", "Contributions"),
+        ("/stories/resources.html", "Resources"),
     ),
 }
 
