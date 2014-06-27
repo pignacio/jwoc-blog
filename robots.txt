@@ -1,0 +1,2 @@
+Sitemap: http://pignacio.github.io/sitemapindex.xml
+

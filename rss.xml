@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>The JWOC Blog</title><link>http://pignacio.github.io/jwoc-blog</link><description>JWOC diary.</description><language>es</language><lastBuildDate>Fri, 27 Jun 2014 00:38:12 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Inicios</title><link>http://pignacio.github.io/posts/inicios.html</link><dc:creator>Ignacio Rossi</dc:creator><description>&lt;p&gt;Bueno, comenzamos una nueva etapa / proyecto / cosa.&lt;/p&gt;
+&lt;p&gt;La idea me parece tantas cosas: desde loca y ridícula hasta increíblemente
+genial. Veremos que sale de esto :)&lt;/p&gt;
+&lt;p&gt;Por lo pronto acá voy a ir tirando las cosas que vaya
+haciendo/mirando/aprendiendo, para que quede la referencia a futuro, haya
+pruebas para que me renueven  (o no) el contrato, y porque no, para fijar
+ideas.&lt;/p&gt;
+&lt;p&gt;Para dar un poco de contexto al visitante desprevenido, voy a estar aprendiendo
+(o por lo menos intentando) machine learning, y contribuyendo endemientras a
+&lt;a class="reference external" href="http://www.github.com/scikit-learn/scikit-learn"&gt;scikit-learn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Estoy anotado en el curso de machine learning de &lt;a class="reference external" href="http://www.coursera.org"&gt;Coursera&lt;/a&gt;, que por ahora viene bien, y por ahora sirvió para
+recordarme que no me acuerdo absolutamente nada de Cálculo Numérico :P&lt;/p&gt;
+&lt;p&gt;Después de un par de días, tenemos &lt;a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/3317"&gt;el primer pull request&lt;/a&gt; en camino. Es un
+cambio sencillo en la documentación, pero bueno, por algún lado hay que
+empezar.&lt;/p&gt;
+&lt;p&gt;Encolados en este momento tengo tres issues que me recomendaron hacer. Hay otro
+de documentación, un poco más delicado porque tuve que empezar a leer cosas,
+hoy me pasé medio día leyendo cosas en Wikipedia intentando entender algunas
+cosas, y creo que entendí que es lo que hay que hacer, solo falta el cómo :P.&lt;/p&gt;
+&lt;p&gt;Los otros dos issues son de programar, dos refactorings, uno de unificar API y
+otro de reacomodar unas cosas que va a implicar pensar los cambios (no queda
+claro como implementar el refactoring)&lt;/p&gt;
+&lt;p&gt;Por lo pronto, además de este post, hay dos páginas más, &lt;a class="reference external" href="http://pignacio.github.io/stories/contributions.html"&gt;una&lt;/a&gt; con la lista de cambios y &lt;a class="reference external" href="http://pignacio.github.io/stories/resources.html"&gt;otra&lt;/a&gt; con
+charlas/textos/links. Para tener las cosas mas o menos ordenadas.&lt;/p&gt;
+&lt;p&gt;Realmente estoy con muchas ganas de hacer esto y ver que pasa :D&lt;/p&gt;
+&lt;p&gt;Desde ya, gracias totales por todo a quién hace posible todo esto.&lt;/p&gt;</description><guid>http://pignacio.github.io/posts/inicios.html</guid><pubDate>Fri, 27 Jun 2014 01:57:57 GMT</pubDate></item></channel></rss>
