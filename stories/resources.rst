@@ -25,5 +25,14 @@ python
 ------
 
 * `Pickles are for delis not software
-  <http://pyvideo.org/video/2566/pickles-are-for-delis-not-software>`_ by Alex Gaynor
+  <http://pyvideo.org/video/2566/pickles-are-for-delis-not-software>`_ by Alex
+  Gaynor
 
+testing
+-------
+
+* `Integration tests are a scam <http://vimeo.com/80533536>`_ by J. B.
+  Rainsberger
+* `Testing v.s. checking
+  <http://www.developsense.com/blog/2009/08/testing-vs-checking/>`_ by Michael
+  Bolton
