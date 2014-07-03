@@ -34,7 +34,7 @@ together.
 **WARNING**: Right now this development branch is broken. I've only made changes so the
 ``KFold`` and ``StratifiedKFold`` work as expected. The following code was used
 for simple testing. Both variants of the for loops should behave the same
-(tough we prefer the ``split()`` one, right?)
+(although we prefer the ``split()`` one, right?)
 
 .. code:: python
 
@@ -76,5 +76,15 @@ A little rationale/storytelling about the changes:
 
 * There are some quirky parts in order to maintain backwards compatibility with
   the pass-data-in-the-constructor approach. Mostly ``None`` checking and
-  falling back to internals. See ``_PartitionIterator._sample_size`` for an
+  falling back to CV members. See ``_PartitionIterator._sample_size`` for an
   extracted example.
+
+Big picture TODOs:
+
+* Make all CV iterators work this way
+
+* Support more values for ``y``: namely dicts of arrays and pandas DataFrame.
+  Maybe we can find a nice structure for an internal class and normalize all
+  inputs to that at the beginning, but I didn't have time yet to check this
+
+

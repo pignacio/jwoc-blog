@@ -154,7 +154,7 @@ together.</p>
 <p><strong>WARNING</strong>: Right now this development branch is broken. I've only made changes so the
 <tt class="docutils literal">KFold</tt> and <tt class="docutils literal">StratifiedKFold</tt> work as expected. The following code was used
 for simple testing. Both variants of the for loops should behave the same
-(tough we prefer the <tt class="docutils literal">split()</tt> one, right?)</p>
+(although we prefer the <tt class="docutils literal">split()</tt> one, right?)</p>
 <pre class="code python literal-block">
 <span class="kn">from</span> <span class="nn">sklearn.model_selection.partition</span> <span class="kn">import</span> <span class="n">KFold</span><span class="p">,</span> <span class="n">StratifiedKFold</span>
 <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_boston</span><span class="p">,</span> <span class="n">load_digits</span>
@@ -193,9 +193,16 @@ constructors, and calls back the CV iterator via <tt class="docutils literal">_i
 <li>
 <p class="first">There are some quirky parts in order to maintain backwards compatibility with
 the pass-data-in-the-constructor approach. Mostly <tt class="docutils literal">None</tt> checking and
-falling back to internals. See <tt class="docutils literal">_PartitionIterator._sample_size</tt> for an
+falling back to CV members. See <tt class="docutils literal">_PartitionIterator._sample_size</tt> for an
 extracted example.</p>
 </li>
+</ul>
+<p>Big picture TODOs:</p>
+<ul class="simple">
+<li>Make all CV iterators work this way</li>
+<li>Support more values for <tt class="docutils literal">y</tt>: namely dicts of arrays and pandas DataFrame.
+Maybe we can find a nice structure for an internal class and normalize all
+inputs to that at the beginning, but I didn't have time yet to check this</li>
 </ul>
     </div>
 </article>
