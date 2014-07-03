@@ -32,7 +32,7 @@ empezar.
 Encolados en este momento tengo tres issues que me recomendaron hacer. Hay otro
 de documentación, un poco más delicado porque tuve que empezar a leer cosas,
 hoy me pasé medio día leyendo cosas en Wikipedia intentando entender algunas
-cosas, y creo que entendí que es lo que hay que hacer, solo falta el cómo :P.
+cosas, y creo que entendí que es lo que hay que hacer, solo falta el como :P.
 
 Los otros dos issues son de programar, dos refactorings, uno de unificar API y
 otro de reacomodar unas cosas que va a implicar pensar los cambios (no queda
@@ -40,8 +40,8 @@ claro como implementar el refactoring)
 
 Por lo pronto, además de este post, hay dos páginas más, :doc:`una
 <contributions>` con la lista de cambios y :doc:`otra <resources>` con
-charlas/textos/links. Para tener las cosas mas o menos ordenadas.
+charlas/textos/links. Para tener las cosas más o menos ordenadas.
 
 Realmente estoy con muchas ganas de hacer esto y ver que pasa :D
 
-Desde ya, gracias totales por todo a quién hace posible todo esto.
+Desde ya, gracias totales por todo a quien hace posible todo esto.

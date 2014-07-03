@@ -6,30 +6,34 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://pignacio.github.io/jwoc-blog/2014/index.html</loc>
-  <lastmod>2014-06-27</lastmod>
+  <lastmod>2014-07-03</lastmod>
  </url>
  <url>
   <loc>http://pignacio.github.io/jwoc-blog/archive.html</loc>
-  <lastmod>2014-06-27</lastmod>
+  <lastmod>2014-07-03</lastmod>
  </url>
  <url>
   <loc>http://pignacio.github.io/jwoc-blog/categories/index.html</loc>
-  <lastmod>2014-06-27</lastmod>
+  <lastmod>2014-07-03</lastmod>
  </url>
  <url>
   <loc>http://pignacio.github.io/jwoc-blog/index.html</loc>
-  <lastmod>2014-06-27</lastmod>
+  <lastmod>2014-07-03</lastmod>
  </url>
  <url>
   <loc>http://pignacio.github.io/jwoc-blog/posts/inicios.html</loc>
-  <lastmod>2014-06-27</lastmod>
+  <lastmod>2014-07-03</lastmod>
  </url>
  <url>
   <loc>http://pignacio.github.io/jwoc-blog/stories/contributions.html</loc>
-  <lastmod>2014-06-27</lastmod>
+  <lastmod>2014-07-03</lastmod>
  </url>
  <url>
   <loc>http://pignacio.github.io/jwoc-blog/stories/resources.html</loc>
-  <lastmod>2014-06-27</lastmod>
+  <lastmod>2014-07-03</lastmod>
+ </url>
+ <url>
+  <loc>http://pignacio.github.io/jwoc-blog/stories/stuff-about-scikit-learn18482904.html</loc>
+  <lastmod>2014-07-03</lastmod>
  </url>
 </urlset>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stuff about scikit-learn:#1848/#2904 | The JWOC Blog</title>
+
+    
+            <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+
+    
+            <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+
+      <link rel="canonical" href="http://pignacio.github.io/stories/stuff-about-scikit-learn18482904.html">
+
+
+
+    
+        <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
+
+    
+
+
+    
+    
+
+    <meta name="author" content="Ignacio Rossi">
+    
+        <meta name="og:title" content="Stuff about scikit-learn:#1848/#2904">
+        <meta name="og:url" content="http://pignacio.github.io/stories/stuff-about-scikit-learn18482904.html">
+            <meta name="og:description" content="I'm trying a first attempt at these two scikit-learn issues: #1848: Rename
+grid search module and #2904:
+Data independent CV iterators.
+#1848 is an API refactor, merging stuff in a new model_selection">
+        <meta name="og:site_name" content="The JWOC Blog">
+        <meta name="og:type" content="article">
+
+    
+
+    
+
+
+    <meta name="author" content="Ignacio Rossi">
+    
+        <meta name="og:title" content="Stuff about scikit-learn:#1848/#2904">
+        <meta name="og:url" content="http://pignacio.github.io/stories/stuff-about-scikit-learn18482904.html">
+            <meta name="og:description" content="I'm trying a first attempt at these two scikit-learn issues: #1848: Rename
+grid search module and #2904:
+Data independent CV iterators.
+#1848 is an API refactor, merging stuff in a new model_selection">
+        <meta name="og:site_name" content="The JWOC Blog">
+        <meta name="og:type" content="article">
+
+    
+
+    
+
+
+
+</head>
+<body>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://pignacio.github.io/jwoc-blog">
+
+                <span id="blog-title">The JWOC Blog</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                
+                <li>
+<a href="../archive.html">Archivo</a>
+                </li>
+<li>
+<a href="../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../rss.xml">feed RSS</a>
+                </li>
+<li>
+<a href="contributions.html">Contributions</a>
+                </li>
+<li>
+<a href="resources.html">Resources</a>
+
+                
+            </li>
+</ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                
+                    
+    <li>
+    <a href="stuff-about-scikit-learn18482904.rst" id="sourcelink">Código</a>
+    </li>
+
+                
+            </ul>
+        </div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav>
+
+<!-- End of Menubar -->
+
+<div class="container">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <header>
+        
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Stuff about scikit-learn:#1848/#2904</a></h1>
+
+        
+
+    </header>
+    <div itemprop="articleBody text">
+    <p>I'm trying a first attempt at these two scikit-learn issues: <a class="reference external" href="http://www.github.com/scikit-learn/scikit-learn/issues/1848">#1848: Rename
+grid search module</a> and <a class="reference external" href="http://www.github.com/scikit-learn/scikit-learn/issues/2094">#2904:
+Data independent CV iterators</a>.</p>
+<p>#1848 is an API refactor, merging stuff in a new <tt class="docutils literal">model_selection</tt> module</p>
+<p>#2904 adressess a reusability problem with current Cross Validation iterators,
+namely, that the iterators are bound to the data in the constructor. The
+proposed API change goes along the following lines:</p>
+<pre class="code python literal-block">
+<span class="c"># Old syntax</span>
+<span class="k">for</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">n_folds</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">train</span><span class="p">,</span> <span class="n">tests</span>
+
+<span class="c"># New syntax</span>
+<span class="k">for</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_folds</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">train</span><span class="p">,</span> <span class="n">tests</span>
+</pre>
+<p>These two issues are somewhat related, so I'm going to try to tackle them
+together.</p>
+<p><strong>WARNING</strong>: Right now this development branch is broken. I've only made changes so the
+<tt class="docutils literal">KFold</tt> and <tt class="docutils literal">StratifiedKFold</tt> work as expected. The following code was used
+for simple testing. Both variants of the for loops should behave the same
+(tough we prefer the <tt class="docutils literal">split()</tt> one, right?)</p>
+<pre class="code python literal-block">
+<span class="kn">from</span> <span class="nn">sklearn.model_selection.partition</span> <span class="kn">import</span> <span class="n">KFold</span><span class="p">,</span> <span class="n">StratifiedKFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_boston</span><span class="p">,</span> <span class="n">load_digits</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">boston</span> <span class="o">=</span> <span class="n">load_boston</span><span class="p">()</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">boston</span><span class="o">.</span><span class="n">target</span>
+<span class="c">#    for train, test in KFold(len(y)):</span>
+    <span class="k">for</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">KFold</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="k">print</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span>
+    <span class="n">digits</span> <span class="o">=</span> <span class="n">load_digits</span><span class="p">()</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span>
+<span class="c">#    for train, test in StratifiedKFold(y):</span>
+    <span class="k">for</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">StratifiedKFold</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="k">print</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre>
+<p>A little rationale/storytelling about the changes:</p>
+<ul>
+<li>
+<p class="first">As the same CV iterator can now be used several times (particularly in a
+nested way), a new object which controls the generation must be created each
+time, and must be independent from all others. This also means that
+generating the masks for a dataset should not alter the internal state of the
+CV.</p>
+<p>Enter <tt class="docutils literal">_PartitionTestGenerator</tt></p>
+<p>This class contains all data we are trying to remove from the CV
+constructors, and calls back the CV iterator via <tt class="docutils literal">_iter_tests_masks</tt>
+<strong>with</strong> the data to obtain the splits. (Basically does the old
+<tt class="docutils literal">CV.__iter__</tt> work)</p>
+</li>
+<li>
+<p class="first">There are some quirky parts in order to maintain backwards compatibility with
+the pass-data-in-the-constructor approach. Mostly <tt class="docutils literal">None</tt> checking and
+falling back to internals. See <tt class="docutils literal">_PartitionIterator._sample_size</tt> for an
+extracted example.</p>
+</li>
+</ul>
+    </div>
+</article>
+
+        </div>
+        <!--End of body content-->
+
+        <footer>
+            Contents © 2014         <a href="mailto:rossi.ignacio@gmail.com">Ignacio Rossi</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+    </div>
+</div>
+
+
+            <script src="../assets/js/all-nocdn.js"></script>
+        <script src="../assets/js/colorbox-i18n/jquery.colorbox-es.js"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+    <script>jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+    
+
+
+</body>
+</html>
